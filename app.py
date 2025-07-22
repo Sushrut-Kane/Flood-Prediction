@@ -47,3 +47,10 @@ if st.button("Predict"):
         st.error(f"Flood likely! (Risk: {proba:.2f})")
     else:
         st.success(f"No flood predicted. (Risk: {proba:.2f})")
+#------------------------map------------------------------------
+import pandas as pd
+location_df = pd.DataFrame({
+    'lat': [lat],  
+    'lon': [lon]
+})
+st.map(location_df)
